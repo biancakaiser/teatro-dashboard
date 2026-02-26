@@ -1,0 +1,171 @@
+export default {
+  users: [
+    {
+      id: 128,
+      firstName: 'Amanda',
+      lastName: 'Petit',
+      email: 'jupcut@launchpad.com.br',
+      dob: '1993-01-15T03:25:03.000Z',
+      phoneNumber: '11 5678-5678',
+      cellphoneNumber: '(11) 91234-1234',
+      addressStreet: 'Av. Paulista',
+      addressNumber: '1842',
+      addressComplement: 'Cj. 155',
+      addressDistrict: 'Cerqueira César',
+      addressCity: 'São Paulo',
+      addressState: 'SP',
+      addressZipCode: '01310923',
+      taxDocumentType: 'CPF',
+      taxDocumentNumber: '64237497798',
+      identityNumber: '067548274',
+      identityIssuer: 'SSP-SP',
+      identityIssueDate: '2016-11-29T02:00:00.000Z',
+      companyName: 'Bo evrecbeb.',
+      role: "USER"
+    },
+    {
+      id: 146,
+      firstName: 'Christian',
+      lastName: 'Carbone',
+      email: 'ife@launchpad.com.br',
+      dob: '1972-08-16T18:58:32.000Z',
+      phoneNumber: '11 5678-5678',
+      cellphoneNumber: '(11) 91234-1234',
+      addressStreet: 'Av. Paulista',
+      addressNumber: '1842',
+      addressComplement: 'Cj. 155',
+      addressDistrict: 'Cerqueira César',
+      addressCity: 'São Paulo',
+      addressState: 'SP',
+      addressZipCode: '01310923',
+      taxDocumentType: 'CPF',
+      taxDocumentNumber: '96689139735',
+      identityNumber: '497288386',
+      identityIssuer: 'SSP-SP',
+      identityIssueDate: '2016-11-29T02:00:00.000Z',
+      companyName: 'Ineve sonciem.',
+      role: "USER"
+    },
+    {
+      id: 187,
+      firstName: 'Lawrence',
+      lastName: 'van Ommeren',
+      email: 'zodvena@launchpad.com.br',
+      dob: '1989-08-04T00:00:00.000Z',
+      phoneNumber: '(11) 5678-1234',
+      cellphoneNumber: '(11) 91234-1234',
+      addressStreet: 'Av. Paulista',
+      addressNumber: '1842',
+      addressComplement: 'Cj. 155',
+      addressDistrict: 'Cerqueira César',
+      addressCity: 'São Paulo',
+      addressState: 'SP',
+      addressZipCode: '01310923',
+      taxDocumentType: 'CPF',
+      taxDocumentNumber: '85846558160',
+      identityNumber: '121234561',
+      identityIssuer: 'SSP-SP',
+      identityIssueDate: '2016-11-29T00:00:00.000Z',
+      companyName: 'Espresso Labs',
+      role: "ADMIN"
+    }],
+  products: [
+    {
+      id: 150,
+      name: 'Ec ad wazu ezoganraw.',
+      description:
+        'Itsep pi acodeh sapmu coji ivreb ohpem mita lah ver wokcomil kavwucag itito cel nabbanfuh og.',
+      composition:
+        'Giw ko ularu afa gipum idifu pawjutka deta olbennik mumze avo ge usufo falifu zibahus iju ubibeleh entu.',
+      netWeight: '80 g',
+      grossWeight: '100 g',
+      volume: '80 mL',
+      barCode: '789856293458',
+      priceNominal: 3500,
+      priceDiscounted: 2800,
+      sizeWidth: '50 mm',
+      sizeHeight: '100 mm',
+      sizeLength: '150 mm'
+    },
+    {
+      id: 152,
+      name: 'Facu minpev jovto ralisos.',
+      description:
+        'Biwfi ac guzihud hesbez zaz tapperog zenemkup oro pos tucegrej fiwzopes re dopor zowba.',
+      composition:
+        'Zeznud rihulnat nawuf ebe te ruczalzu apa liwgokij zesre aduelutap tevipobet filwaz ji zop ovajonal tafocone cejwigiwe.',
+      netWeight: '80 g',
+      grossWeight: '100 g',
+      volume: '80 mL',
+      barCode: '789988866388',
+      priceNominal: 3500,
+      priceDiscounted: 2800,
+      sizeWidth: '50 mm',
+      sizeHeight: '100 mm',
+      sizeLength: '150 mm'
+    },
+    {
+      id: 154,
+      name: 'Wiwma nu ufi ne.',
+      description:
+        'Re ob ik toisfud tok gepamukig hec lowuk zo fi ruesso fe alsoonu nihetok gok koklocnu.',
+      composition:
+        'Sagiv casowepot duhtibow li zep nanus tic ezulecid ditpo wages falana pugevo.',
+      netWeight: '80 g',
+      grossWeight: '100 g',
+      volume: '80 mL',
+      barCode: '789120996420',
+      priceNominal: 3500,
+      priceDiscounted: 2800,
+      sizeWidth: '50 mm',
+      sizeHeight: '100 mm',
+      sizeLength: '150 mm'
+    },
+    {
+      id: 164,
+      name: 'Jufurel gagciuwe ezgiifo fo.',
+      description:
+        'Ni lubwem ahe zolcewhib vekfa efeketo fel ruveezi re poroho dibiihe wedkum ribgo giej.',
+      composition:
+        'Eha vigo kuv deagotu bobu zavzi sek meihu cim zanbu itufed gigur guhroot lietufud dez holnibuv kag kuzne.',
+      netWeight: '80 g',
+      grossWeight: '100 g',
+      volume: '80 mL',
+      barCode: '789811261906',
+      priceNominal: 3500,
+      priceDiscounted: 2800,
+      sizeWidth: '50 mm',
+      sizeHeight: '100 mm',
+      sizeLength: '150 mm'
+    },
+    {
+      id: 166,
+      name: 'Lalumuw oca pi haognim.',
+      description:
+        'Hopbek fov murcucma veke jus fiwovog gem wesag na ri sa ivaakubik tar.',
+      composition:
+        'Lenojetaw kuzepgog taihaojo pe gezaza dugsif kogzi cojene seztac ga ow umauc.',
+      netWeight: '80 g',
+      grossWeight: '100 g',
+      volume: '80 mL',
+      barCode: '789263402826',
+      priceNominal: 3500,
+      priceDiscounted: 2800,
+      sizeWidth: '50 mm',
+      sizeHeight: '100 mm',
+      sizeLength: '150 mm'
+    },
+  ],
+  orders: [
+    {
+      id: 99,
+      creationDate: "2018-08-10T15:16:21.000Z",
+      clientId: 188,
+      sellerId: 229,
+      orderNumber: '33TFHXWEMU',
+      totalBeforeDiscount: 96000,
+      discountAmount: 0,
+      shippingAmount: 0,
+      totalAmount: 96000
+    }],
+}

@@ -1,6 +1,7 @@
 {
   "name": "teatro-dashboard",
   "version": "1.0.0",
+  "overrides": { "node-sass": "npm:sass@^1.69.0" },
   "description": "Teatro musicado dashboard",
   "scripts": {
     "serve": "vue-cli-service serve --open",

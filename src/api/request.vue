@@ -4,7 +4,7 @@
 let axios = require("axios");
 import session from "./session.vue";
 
-const serverUrl = process.env.VUE_APP_API_URL;
+const serverUrl = process.env.VUE_APP_API_URL || 'https://api.humangov.art';
 
 export default {
   send: async function(apiName, command, data, sendToken = false) {

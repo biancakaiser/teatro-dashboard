@@ -4,7 +4,7 @@
 let axios = require("axios");
 import session from "./session.vue";
 
-const serverUrl = process.env.VUE_APP_API_URL || 'https://api.humangov.art';
+const serverUrl = process.env.API_URL || 'https://api.teatromusicado.com.br';
 
 export default {
   send: async function(apiName, command, data, sendToken = false) {

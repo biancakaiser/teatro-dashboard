@@ -3,8 +3,9 @@
 
 let axios = require("axios");
 import session from "./session.vue";
-
 const serverUrl = process.env.API_URL || 'https://api.teatromusicado.com.br';
+console.log("API URL:", serverUrl);
+console.log("Process env:", process.env);
 
 export default {
   send: async function(apiName, command, data, sendToken = false) {

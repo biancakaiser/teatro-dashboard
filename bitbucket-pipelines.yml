@@ -8,7 +8,7 @@ definitions:
           - node
         script:
           # build
-          - export VUE_APP_API=$API_URL
+          - export API_URL=$API_URL
           - npm install
           - npm run build
         artifacts:
@@ -41,7 +41,7 @@ definitions:
           - node
         script:
           # build
-          - export VUE_APP_API=$API_URL
+          - export API_URL=$API_URL
           - npm install
           - npm run build
         artifacts:

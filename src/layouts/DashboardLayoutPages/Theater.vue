@@ -741,6 +741,7 @@ export default {
     getRecord() {
       TheaterAPI.getRecord({ theaterId: this.$route.params.teatroId })
         .then(response => {
+          console.log(response);
           this.responsibles = response.responsibles;
           this.responsibles.forEach(responsible => {
             responsible.firstDate = formatDate(responsible.firstDate);

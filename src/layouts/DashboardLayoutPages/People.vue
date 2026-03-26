@@ -32,7 +32,7 @@
                   class="mb-3"
                   clearable
                   style="width: 280px"
-                  placeholder="Busca por nome civil ou artístico"
+                  placeholder="Busca por nomes ou ID"
                   v-model="searchQuery">
                 </md-input>
               </md-field>
@@ -42,7 +42,8 @@
             <md-table-row slot="md-table-row" slot-scope="{ item }" @click="openPerson(item)" style="cursor: pointer">             
               <md-table-cell md-label="Nome artístico" md-sort-by="artistName">{{ item.artistName }}</md-table-cell>
               <md-table-cell md-label="Nome civil" md-sort-by="civilName" >{{ item.civilName }}</md-table-cell>
-              <md-table-cell md-label="Data de nascimento" md-sort-by="birthDate">{{ item.birthDate|formatDatetime }}</md-table-cell>
+              <md-table-cell md-label="ID da pessoa" md-sort-by="id">{{ item.id }}</md-table-cell>
+              <!-- <md-table-cell md-label="Data de nascimento" md-sort-by="birthDate">{{ item.birthDate|formatDatetime }}</md-table-cell> -->
             </md-table-row>
           </md-table>
           
@@ -102,7 +103,7 @@ export default {
         total: 0
       },
       searchQuery: "",
-      propsToSearch: ["artistName", "civilName"],
+      propsToSearch: ["artistName", "civilName", "id"],
       tableData: [],
       searchedData: [],
       fuseSearch: null,
@@ -184,7 +185,7 @@ export default {
       PersonAPI.getAll().then(response => {
         this.tableData = response.persons;
         this.fuseSearch = new Fuse(this.tableData, {
-          keys: ["artistName", "civilName"],
+          keys: ["artistName", "civilName", "id"],
           threshold: 0.3
         });
         this.hideModal();

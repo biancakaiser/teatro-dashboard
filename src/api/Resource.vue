@@ -16,6 +16,7 @@ export default {
  * @apiSuccess {Bool} success
  */
 	updateInfo(data) {
+    console.log("Updating resource info with data:", data);
 		return request.send("resource", "updateInfo", data, true)
 		.then(response => {
       return response;

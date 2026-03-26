@@ -24,7 +24,7 @@
 							<md-button class="md-accent" style="margin-top: -25px;" @click="addTheater">Adicionar teatro</md-button>
 
 							<md-field>
-								<md-input type="search" class="mb-3" clearable style="width: 280px" placeholder="Busca por nome ou bairro"
+								<md-input type="search" class="mb-3" clearable style="width: 280px" placeholder="Busca por nomes ou ID"
 								 v-model="searchQuery">
 								</md-input>
 							</md-field>
@@ -33,9 +33,11 @@
 
 						<md-table-row slot="md-table-row" slot-scope="{ item }" @click="openTheater(item)" style="cursor: pointer">
 							<md-table-cell md-label="Nome" md-sort-by="name">{{ item.name }}</md-table-cell>
-							<md-table-cell md-label="Data de fundação" md-sort-by="foundationDate">{{ item.foundationDate | formatDatetime}}</md-table-cell>
-							<md-table-cell md-label="Endereço original" md-sort-by="foundationAddress">{{ item.foundationAddress }}</md-table-cell>
-							<md-table-cell md-label="Área do teatro" md-sort-by="neighborhood">{{ item.neighborhood }}</md-table-cell>
+							<md-table-cell md-label="Referencias" md-sort-by="otherNames">{{ item.otherNames }}</md-table-cell>
+              <md-table-cell md-label="ID do teatro" md-sort-by="id">{{ item.id }}</md-table-cell>
+              <!-- <md-table-cell md-label="Data de fundação" md-sort-by="foundationDate">{{ item.foundationDate | formatDatetime}}</md-table-cell> -->
+							<!-- <md-table-cell md-label="Endereço original" md-sort-by="foundationAddress">{{ item.foundationAddress }}</md-table-cell> -->
+							<!-- <md-table-cell md-label="Área do teatro" md-sort-by="neighborhood">{{ item.neighborhood }}</md-table-cell> -->
 						</md-table-row>
 					</md-table>
 
@@ -94,7 +96,7 @@ export default {
         total: 0
       },
       searchQuery: "",
-      propsToSearch: ["name", "neighborhood"],
+      propsToSearch: ["name", "otherNames", "id"],
       tableData: [],
       searchedData: [],
       fuseSearch: null,
@@ -158,7 +160,7 @@ export default {
         .then(data => {
           this.tableData = data.theaters;
           this.fuseSearch = new Fuse(this.tableData, {
-            keys: ["name", "neighborhood"],
+            keys: ["name", "otherNames", "id"],
             threshold: 0.3
           });
           this.hideModal();

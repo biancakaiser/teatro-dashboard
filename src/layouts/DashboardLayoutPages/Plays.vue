@@ -32,7 +32,7 @@
                   class="mb-3"
                   clearable
                   style="width: 280px"
-                  placeholder="Busca por nome"
+                  placeholder="Busca por nome ou ID"
                   v-model="searchQuery">
                 </md-input>
               </md-field>
@@ -41,9 +41,10 @@
 
             <md-table-row slot="md-table-row" slot-scope="{ item }" @click="openPlay(item)" style="cursor: pointer">
               <md-table-cell md-label="Título Original" md-sort-by="originalName" >{{ item.name ? item.name : item.originalName }}</md-table-cell>
-              <md-table-cell md-label="Gênero" md-sort-by="genre">{{ item.genre }}</md-table-cell>
-              <md-table-cell md-label="Idioma" md-sort-by="languageId">{{ item.language }}</md-table-cell>
-              <md-table-cell md-label="Primeira exibição em SP" md-sort-by="spFirstDate">{{ item.spFirstDate|formatDatetime}}</md-table-cell>
+              <md-table-cell md-label="ID da Peça" md-sort-by="id">{{ item.id }}</md-table-cell>
+              <!-- <md-table-cell md-label="Gênero" md-sort-by="genre">{{ item.genre }}</md-table-cell> -->
+              <!-- <md-table-cell md-label="Idioma" md-sort-by="languageId">{{ item.language }}</md-table-cell> -->
+              <!-- <md-table-cell md-label="Primeira exibição em SP" md-sort-by="spFirstDate">{{ item.spFirstDate|formatDatetime}}</md-table-cell> -->
             </md-table-row>
           </md-table>
 
@@ -105,7 +106,7 @@ export default {
         total: 0
       },
       searchQuery: "",
-      propsToSearch: ["name", "neighborhood"],
+      propsToSearch: ["name", "id"],
       tableData: [],
       searchedData: [],
       fuseSearch: null,
@@ -187,7 +188,7 @@ export default {
       PlayAPI.getAll().then(response => {
         this.tableData = response.plays;
         this.fuseSearch = new Fuse(this.tableData, {
-          keys: ["originalName", "name"],
+          keys: ["originalName", "name", "id"],
           threshold: 0.3
         });
         this.hideModal();

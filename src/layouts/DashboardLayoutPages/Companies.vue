@@ -32,7 +32,7 @@
                   class="mb-3"
                   clearable
                   style="width: 280px"
-                  placeholder="Busca por nome ou nomes alternativos"
+                  placeholder="Busca por nomes ou IDs"
                   v-model="searchQuery">
                 </md-input>
               </md-field>
@@ -42,7 +42,8 @@
             <md-table-row slot="md-table-row" slot-scope="{ item }" @click="openCompany(item)" style="cursor: pointer">
               <md-table-cell md-label="Nome" md-sort-by="name" >{{ item.name }}</md-table-cell>
               <md-table-cell md-label="Nomes alternativos" md-sort-by="otherNames">{{ item.otherNames }}</md-table-cell>
-              <md-table-cell md-label="Data de fundação" md-sort-by="foundationDate">{{ item.foundationDate|formatDatetime }}</md-table-cell>
+              <md-table-cell md-label="ID da companhia" md-sort-by="id">{{ item.id }}</md-table-cell>
+              <!-- <md-table-cell md-label="Data de fundação" md-sort-by="foundationDate">{{ item.foundationDate|formatDatetime }}</md-table-cell> -->
 
             </md-table-row>
           </md-table>
@@ -104,7 +105,7 @@ export default {
         total: 0
       },
       searchQuery: "",
-      propsToSearch: ["name", "neighborhood"],
+      propsToSearch: ["name", "otherNames", "id"],
       tableData: [],
       searchedData: [],
       fuseSearch: null,

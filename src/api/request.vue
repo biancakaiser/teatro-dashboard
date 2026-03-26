@@ -14,6 +14,7 @@ export default {
         data
       }
     };
+    console.log("config:", config);
     if (sendToken) {
       let token = session.getItem("token");
       config.data.token = token;

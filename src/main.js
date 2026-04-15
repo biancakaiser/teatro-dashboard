@@ -12,11 +12,13 @@ import VeeValidate from 'vee-validate';
 
 //Filters
 import './globalFilters'
-
 import './globalFunctions'
 
 // router setup
 import routes from './router/index.js'
+
+// session setup
+import session from './api/session.vue'
 
 // plugin setup
 Vue.use(VueRouter);
@@ -32,13 +34,21 @@ const router = new VueRouter({
   linkExactActiveClass: 'nav-item active'
 });
 
+// configure router navigation guards
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth) && !session.isActive()) {
+    next({ path: '/login' })
+    return
+  }
+  next()
+})
+
 // global library setup
 Object.defineProperty(Vue.prototype, '$Chartist', {
   get() {
     return this.$root.Chartist
   }
 })
-
 
 /* eslint-disable no-new */
 var vm = new Vue({

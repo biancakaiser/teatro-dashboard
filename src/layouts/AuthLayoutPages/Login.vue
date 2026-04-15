@@ -1,8 +1,8 @@
 <template>
   <div class="md-layout text-center">
-    <div class="md-layout-item md-size-100">
+    <!-- <div class="md-layout-item md-size-100">
       <img id="login-logo" src="/img/logo-name.png" style="margin-bottom: 0">
-    </div>
+    </div> -->
     <div class="md-layout-item md-size-33 md-medium-size-50 md-small-size-70 md-xsmall-size-100">
       <login-card header-color="">
         <!-- <h4 slot="title" class="title">Log in</h4> -->

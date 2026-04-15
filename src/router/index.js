@@ -35,102 +35,122 @@ const routes = [
       {
         path: 'visao-geral',
         name: 'Visão geral',
-        components: { default: DashboardLayoutPages.Overview }
+        components: { default: DashboardLayoutPages.Overview },
+        meta: { requiresAuth: true }
       },
       {
         path: 'pessoas',
         name: 'Pesssoas',
-        components: { default: DashboardLayoutPages.People }
+        components: { default: DashboardLayoutPages.People },
+        meta: { requiresAuth: true }
       },
       {
         path: 'companhias',
         name: 'Companhias',
-        components: { default: DashboardLayoutPages.Companies }
+        components: { default: DashboardLayoutPages.Companies },
+        meta: { requiresAuth: true }
       },
       {
         path: 'teatros',
         name: 'Teatros',
-        components: { default: DashboardLayoutPages.Theaters }
+        components: { default: DashboardLayoutPages.Theaters },
+        meta: { requiresAuth: true }
       },
       {
         path: 'pecas',
         name: 'Peças',
-        components: { default: DashboardLayoutPages.Plays }
+        components: { default: DashboardLayoutPages.Plays },
+        meta: { requiresAuth: true }
       },
       {
         path: 'listas',
         name: 'Listas',
-        components: { default: DashboardLayoutPages.Lists }
+        components: { default: DashboardLayoutPages.Lists },
+        meta: { requiresAuth: true }
       },
       {
         path: 'administradores',
         name: 'Administradores',
-        components: { default: DashboardLayoutPages.Admins }
+        components: { default: DashboardLayoutPages.Admins },
+        meta: { requiresAuth: true }
       },
       {
         path: "paginas",
         namn: "Páginas",
-        components: { default: DashboardLayoutPages.Pages }
+        components: { default: DashboardLayoutPages.Pages },
+        meta: { requiresAuth: true }
       },
       {
         path: "/pagina/:pageId",
         namn: "Página",
-        components: { default: DashboardLayoutPages.PageEdit }
+        components: { default: DashboardLayoutPages.PageEdit },
+        meta: { requiresAuth: true }
       },
       {
         path: "/patrocinadores",
         name: "Patrocinadores",
-        components: { default: DashboardLayoutPages.Sponsors }
+        components: { default: DashboardLayoutPages.Sponsors },
+        meta: { requiresAuth: true }
       },
       {
         path: '/pessoa/:pessoaId',
         name: 'Pessoa',
         components: { default: DashboardLayoutPages.Person },
+        meta: { requiresAuth: true }
       },
       {
         path: '/teatro/:teatroId',
         name: 'Teatro',
         components: { default: DashboardLayoutPages.Theater },
+        meta: { requiresAuth: true }
       },
       {
         path: '/companhia/:companhiaId',
         name: 'Companhia',
         components: { default: DashboardLayoutPages.Company },
+        meta: { requiresAuth: true }
       },
       {
         path: '/peca/:pecaId',
         name: 'Peça',
         components: { default: DashboardLayoutPages.Play },
+        meta: { requiresAuth: true }
       },
       {
         path: '/montagem/:montagemId',
         name: 'Montagem',
         components: { default: DashboardLayoutPages.Setting },
+        meta: { requiresAuth: true }
       },
       {
         path: '/lista/:listaNome',
         name: 'Lista',
         components: { default: DashboardLayoutPages.List },
+        meta: { requiresAuth: true }
       },
       {
         path: '/novo/teatro',
         name: 'Novo Teatro',
         components: { default: DashboardLayoutPages.NewTheater },
+        meta: { requiresAuth: true }
       },
       {
         path: '/novo/pessoa',
         name: 'Nova Pessoa',
         components: { default: DashboardLayoutPages.NewPerson },
+        meta: { requiresAuth: true }
       },
       {
         path: '/novo/companhia',
         name: 'Nova Companhia',
         components: { default: DashboardLayoutPages.NewCompany },
+        meta: { requiresAuth: true }
       },
       {
         path: '/novo/peca',
         name: 'Nova Peça',
         components: { default: DashboardLayoutPages.NewPlay },
+        meta: { requiresAuth: true }
       }
     ]
   }

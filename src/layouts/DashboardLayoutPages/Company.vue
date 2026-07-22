@@ -179,7 +179,7 @@
                         v-model="job.firstDate"
                         name="firstDate"
                         v-mask="['##/##/####']"
-                        v-validate="'date_format:DD/MM/YYYY'"
+                        v-validate="'date_format:dd/MM/yyyy'"
                       ></md-input>
                     </md-field>
                   </div>
@@ -196,7 +196,7 @@
                         v-model="job.lastDate"
                         name="lastDate"
                         v-mask="['##/##/####']"
-                        v-validate="'date_format:DD/MM/YYYY'"
+                        v-validate="'date_format:dd/MM/yyyy'"
                       ></md-input>
                     </md-field>
                   </div>

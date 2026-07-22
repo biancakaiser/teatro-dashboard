@@ -254,7 +254,7 @@
 									</label>
 									<div class="md-layout-item">
 										<md-field>
-											<md-input  v-model="presentation.date" v-validate="'required|date_format:DD/MM/YYYY'" v-mask="'##/##/####'" name="date">
+											<md-input  v-model="presentation.date" v-validate="'required|date_format:dd/MM/yyyy'" v-mask="'##/##/####'" name="date">
 											</md-input>
 										</md-field>
 									</div>

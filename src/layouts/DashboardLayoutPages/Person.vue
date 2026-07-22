@@ -276,7 +276,7 @@
 									</label>
 									<div class="md-layout-item">
 										<md-field>
-											<md-input v-model="job.firstDate" name="firstDate" v-mask="['##/##/####']" v-validate="'date_format:DD/MM/YYYY'">
+											<md-input v-model="job.firstDate" name="firstDate" v-mask="['##/##/####']" v-validate="'date_format:dd/MM/yyyy'">
 											</md-input>
 										</md-field>
 									</div>
@@ -291,7 +291,7 @@
 									</label>
 									<div class="md-layout-item">
 										<md-field>
-											<md-input v-model="job.lastDate" name="lastDate" v-mask="['##/##/####']" v-validate="'date_format:DD/MM/YYYY'">
+											<md-input v-model="job.lastDate" name="lastDate" v-mask="['##/##/####']" v-validate="'date_format:dd/MM/yyyy'">
 											</md-input>
 										</md-field>
 									</div>

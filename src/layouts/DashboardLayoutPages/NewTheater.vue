@@ -48,7 +48,7 @@
                 v-model="foundationDate"
                 name="foundationDate"
                 v-mask="['##/##/####']"
-                v-validate="'date_format:DD/MM/YYYY'"
+                v-validate="'date_format:dd/MM/yyyy'"
               ></md-input>
             </md-field>
           </div>
@@ -85,7 +85,7 @@
                 v-model="dissolutionDate"
                 name="dissolutionDate"
                 v-mask="['##/##/####']"
-                v-validate="'date_format:DD/MM/YYYY'"
+                v-validate="'date_format:dd/MM/yyyy'"
               ></md-input>
             </md-field>
           </div>
